@@ -1,0 +1,70 @@
+body {
+    background-color: #343541;
+}
+
+body {
+    color: #ffffff;
+    font-family: Arial, Sans-serif;
+}
+section {
+    margin-bottom: 20px;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #ffffff;
+}
+#experience {
+    background-color: #444654;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+#skills {
+    background-color: #444654;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+form {
+    font-size: 1.1em;
+    color: #ffffff;
+
+}
+form input,
+form textarea {
+    font-size: 1.1em;
+    padding: 12px;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    width: 100%;
+    margin: 8px 0;
+}
+form button[type='submit'] {
+    padding:10px 20px;
+    background-color: #4a4c5b;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor:pointer;
+}
+#messages {
+    background-color: #444654;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+.remove-button {
+    padding: 5px 10px;
+    background-color: #343541;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+footer {
+    background-color: #444654;
+    padding: 20px;
+    margin-top:20px;
+}
