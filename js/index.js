@@ -34,6 +34,7 @@ newMessage.innerHTML = `
 
 const removeButton = document.createElement('button');
 
+removeButton.classList.add('remove-button');
 removeButton.innerText = 'remove';
 removeButton.type = 'button';
 
