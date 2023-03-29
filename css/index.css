@@ -1,7 +1,20 @@
 body {
     background-color: #343541;
+    margin: 0 10px;
+    width: 100vw;
 }
-
+html {
+    width: 100vw;
+}
+a {
+    text-decoration: none;
+}
+a:hover {
+    color:#ffffff;
+}
+a:visited {
+    color:rgb(251, 251, 251);
+}
 body {
     color: #ffffff;
     font-family: Arial, Sans-serif;
@@ -14,13 +27,16 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: bold;
     color: #ffffff;
 }
-#experience {
+#experience li{
+    display :grid;
+    text-align:left;
     background-color: #444654;
     padding: 10px;
     margin-bottom: 10px;
     border-radius: 5px;
+    list-style-type: none;
 }
-#skills {
+#skills li:hover{
     background-color: #444654;
     padding: 10px;
     margin-bottom: 10px;
@@ -48,12 +64,29 @@ form button[type='submit'] {
     border-radius: 5px;
     cursor:pointer;
 }
-#messages {
-    background-color: #444654;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 5px;
+.message-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
+#messages li{
+    background-color: #444654;
+    display: inline;
+    margin: 20px 10px;
+}
+@media screen and (min-width: 1024px) {
+    body {
+        font-size: 20px;
+    }
+h1 {
+    font-size:4rem;
+}
+
+p {
+    font-size:1.4rem;
+}
+}
+
 .remove-button {
     padding: 5px 10px;
     background-color: #343541;
