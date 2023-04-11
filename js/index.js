@@ -52,3 +52,22 @@ messageList.appendChild(newMessage);
 messageForm.reset();
 
 });
+const githubRequest = new XMLHttpRequest ();
+githubRequest.open("GET", "https://api.github.com/users/yaninacruz/repos");
+githubRequest.send();
+githubRequest.addEventListener("load", () =>{
+    const repositories = JSON.parse(githubRequest.responseText);
+    console.log(repositories);
+
+const projectSection = document.getElementById("projects");
+//query projectSection to find the <ul> element
+const projectList = projectSection.querySelector("ul");
+
+//loop to iterate over repositories array
+for (let i = 0; i < repositories.length; i++) {
+    const project = document.createElement('li');
+    project.innerText = repositories[i].name;
+    projectList.appendChild(project);
+    }
+    
+});
