@@ -52,22 +52,18 @@ messageList.appendChild(newMessage);
 messageForm.reset();
 
 });
-const githubRequest = new XMLHttpRequest ();
-githubRequest.open("GET", "https://api.github.com/users/yaninacruz/repos");
-githubRequest.send();
-githubRequest.addEventListener("load", () =>{
-    const repositories = JSON.parse(githubRequest.responseText);
-    console.log(repositories);
 
-const projectSection = document.getElementById("projects");
-//query projectSection to find the <ul> element
-const projectList = projectSection.querySelector("ul");
+fetch("https://api.github.com/users/yaninacruz/repos")
+.then(response => response.json())
+.then(data => {
+    const projectSection = document.getElementById("projects");
+    data.forEach(repo => {
+        const li = document.createElement('li');
+        const a = document.createElement('a');
+        a.href = repo.html_url;
+        a.textContent = repo.name;
+        li.appendChild(a);
+        projectSection.appendChild(li);
 
-//loop to iterate over repositories array
-for (let i = 0; i < repositories.length; i++) {
-    const project = document.createElement('li');
-    project.innerText = repositories[i].name;
-    projectList.appendChild(project);
-    }
-    
+    });
 });
