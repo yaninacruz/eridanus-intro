@@ -5,7 +5,7 @@ const copyright = document.createElement('p');
 copyright.innerHTML = "Yanina " + thisYear + " &#169";
 footer.appendChild(copyright);
 
-const skills = ["HTML", "JavaScript", "Adobe Photoshop"];
+const skills = ["HTML", "JavaScript", "Adobe Photoshop", "Adobe Lightroom"];
 const skillsSection = document.querySelector('#skills');
 const skillsList = skillsSection.querySelector('ul');
 for (let i = 0; i < skills.length; i++) {
@@ -65,6 +65,7 @@ fetch("https://api.github.com/users/yaninacruz/repos")
         const li = document.createElement('li');
         const a = document.createElement('a');
         a.href = repo.html_url;
+        a.target = "_blank"
         a.textContent = repo.name;
         li.appendChild(a);
         projectSection.appendChild(li);
