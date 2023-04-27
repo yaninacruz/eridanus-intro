@@ -1,8 +1,9 @@
 body {
     background-color: #444654;
     font-family: "Roboto";
-    margin: 0 10px;
-    width: 100vw;
+    margin: 0 auto;
+    width: 90vw;
+    max-width: 1024px;
     line-height: 1.5;
 }
 header {
