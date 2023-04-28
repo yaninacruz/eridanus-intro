@@ -177,3 +177,9 @@ font-size: 28px;
     text-align: center;
     margin: 0;
 }
+/* responsiveness for portrait phones */
+@media only screen and (max-width: 576px) {
+.nav-list {
+display: none;
+}
+}
